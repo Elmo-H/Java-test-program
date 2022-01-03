@@ -1,0 +1,33 @@
+	
+//Esitellään jäsenmuuttujat
+Scanner input = new Scanner(System.in);
+boolean wrong = true;
+Nämä eivät ole jäsenmuuttujia (ne olisivat suoraan luokan alla), vaan funktion paikallisia muuttujia.
+
+//Luodaan metodi jolla saa kysymykset satunnaiseksi. -> Ei ole metodi, vaan olio.
+Random multiple = new Random();
+
+if(answer == num1 * num2) {
+
+System.out.println("Oikea vastaus!");
+wrong = false;
+Ask();
+Ei näin. Tämä on vakava periaatteellinen virhe. Tässä luodaan päättymätön rekursio, joka kasaa pinoon aina uudet metodin paikalliset muuttujat, parametrit ja paluuarvon. Muistinkäyttö kasvaa kierros kierrokselta. Pitemmän päälle koko prosessi jumiutuisi tai käyttöjärjestelmä sen sulkisi. Funktion ei pidä kutsua itse itseään, ellei rekursiolle ole määritelty selkeää loppuehtoa. Silloinkin sitä pitää käyttää vain tapauksissa, kun fiini algoritmi nimenomaan perustuu rekursioon. Tässä sinun pitäisi laittaa toistoehto silmukkaan. Siis tämän while(wrong == true) tilalle tämä while(answer == num1 * num2). Kun lisäksi kysyt ensimmäisen arvon silmukan ulkopuolella ja seuraavat silmukan lopussa, saat toimivan rakenteen.
+
+Laita luvut jäsenmuuttujiksi, niin sekin osaltaan auttaa ulos tätä rekursioansasta. Laita jäsenmuuttujiksi myös edellisen kierroksen luvut.
+
+Poikkeusten käsittely puuttuu.
+
+public static void main(String[] args) throws Exception {
+Main-metodi ei saa koskaan heittää poikkeusta, koska se menee käyttöjärjestelmälle, joka ei voi siinä tilanteessa muuta kuin väkivaltaisesti sulkea ohjelman.
+
+public String askQuestion(int x, int y){
+return "Kuinka paljon on " + x + " kertaa " + y + "?";
+}
+Tämä on aivan tarpeeton metodi, koska se sisältää vain yhden koodirivin. Ohjelma ei lyhene, vaan pitenee ja suoritus hidastuu. Laita mieluummin lukujen arpominen erilliseen metodiin. Ohjelma ei nyt huomioi sitä, ettei samaa kysymystä kysyttäisi peräjälkeen. Lisää sekin samaan metodiin.
+
+int num1 = 1 + multiple.nextInt(9);
+int num2 = 1 + multiple.nextInt(9);
+Yläraja ei tule mukaan, joten tässä pitäisi olla 10. Nämä rajat kannattaa aina aivan erityisesti tarkistaa dokumentaatiosta.
+
+Ohjelmassa on niin paljon periaatteellisia virheitä, etten valitettavasti voi hyväksyä sitä harjoitustyönä.  Tee uusi versio ottaen huomioon kommenttini.
