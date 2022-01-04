@@ -2,31 +2,26 @@ package elmo_harjoitustyo;
 import java.util.*;
 //Rakentaja metodi Question
 public class Question {
+	
+	//Esitell‰‰n j‰senmuuttujat
+	Scanner input = new Scanner(System.in);
+    boolean wrong = true;
+    Random multiple = new Random();
+    int num1 = 1 + multiple.nextInt(9);
+    int num2 = 1 + multiple.nextInt(9);
 
     public void Ask() {
     	
-    	//Luodaan metodi jolla saa kysymykset satunnaiseksi
-    	Random multiple = new Random();
-    	
-    	//Esitell‰‰n j‰senmuuttujat
-    	Scanner input = new Scanner(System.in);
-        boolean wrong = true;
-        int num1 = 1 + multiple.nextInt(9);
-        int num2 = 1 + multiple.nextInt(9);
-        
+    	//Kysyt‰‰n k‰ytt‰j‰lt‰ kertotauluja
+        System.out.println(askQuestion(num1, num2));
+        int answer = input.nextInt();
         //Tehd‰‰n looppi
-        while(wrong == true) {
-        	
-        	//Kysyt‰‰n k‰ytt‰j‰lt‰ kertotauluja
-	        System.out.println(askQuestion(num1, num2));
-	        int answer = input.nextInt();
-	        
+        while(answer == num1 * num2) {    
 	        //Luodaan if else looppi jossa testataan onko vastaus oikein
 	        //ja jos on se palautuu ohjelman alkuun ja kysyy uudestaan
 	        if(answer == num1 * num2) {
 	            System.out.println("Oikea vastaus!");
 	            wrong = false;
-	            Ask();
 	            }
 	
 	        else {
