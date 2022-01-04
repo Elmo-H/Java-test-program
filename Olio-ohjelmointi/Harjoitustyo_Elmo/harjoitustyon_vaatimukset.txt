@@ -1,0 +1,30 @@
+Java-ohjelmoinnin harjoitustyöKertotaulun opetusohjelmaTee kertotaulun opetusohjelma peruskoululaisille.
+Ohjelma kuulustelee oppilaalta 1-10 kertotaululuja.
+Käytä satunnaislukugeneraattoria arpomaan kaksi positiivista lukua väliltä 1-10.
+Ohjelman tulee esittää käyttäjälle seuraavanlaisia kysymyksiä:
+Paljonko on 4 kertaa 7?
+Oppilas vastaa kysymykseen, jonka jälkeen ohjelma tarkastaa vastauksen. 
+Jos vastaus onoikein, tulosta viesti "Oikein!" ja kysy seuraava kysymys uusilla numeroilla.
+Jos vastaus on väärin, tulosta viesti "Väärin, yritä uudestaan."
+ja anna oppilaan yrittää vastata uudelleen samaan kysymykseen, kunnes hän saa sen oikein.
+Kirjoita erillinen funktio, jossa genero it kysymykset.
+Kutsu tätä funktiota ohjelman alussa sekä aina, kun oppilas vastaa kysymykseen oikein.
+Täydennä ohjelmaa niin, ettei se koskaan kysy samaa kertolaskukysymystä kahta kertaa peräkkäin.
+Työn arvostelukriteeritTyön hyväksytty palautus on edellytys kurssisuorituksen saamiselle.
+Tämän työn palautuksella voi saavuttaa arvosanat 1 – 2.
+Työn hyväksytty suoritus myös korottaa tentillä saavutettua arvosanaa yhdellä.
+Vaatimukset arvosanalle 1: Ohjelma menee virheittä kääntäjästä läpi ja on suorittavissa.
+Työn vastaa pääpiirteissään tehtävänantoa.
+Ohjelmassa on yksi tai useampi rakentajametodi, jäsenmuuttuja ja tavallinen metodi (main-metodin lisäksi).
+Työssä ei ole käytetty pelkästään staattisia metodeja.
+Työtä, jossa kaikki koodi on main-metodissa, ei voida hyväksyä harjoitustyönä.
+Vaatimukset arvosanalle 2: Ohjelmassa on aito graafinen käyttöliittymä eli vähintään yksi päätason ikkuna.
+Ohjelman rakenne on hyvän ohjelmointityylin mukainen.
+Se sisältää jäsenmuuttujia, yhden tai useamman rakentajametodin ja tavallisen metodin.
+Ohjelma sisältää asianmukaisen poikkeusten käsittelyn.
+Tarjoa käyttäjälle myös mahdollisuus ohittaa kysymys/siirtyä seuraavaan vastaamatta.
+Työn palauttamisohjeetPalautus Moodlen työtilassa olevaan palautuskansioon.
+Palauta vaihtoehtoisesti joko vain java-lähdekooditiedostot tai koko projekti yhtenä zip-pakettina.
+Valmistaudu vastaamaan muutamaan työtä koskevaan kysymykseen.
+Kysymykset ovat sellaisia, joihin työn tekijä tietää varmasti vastauksen.
+Tällä kontrolloidaan, että työn on tehnyt palauttaja itse.  
